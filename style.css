@@ -1,0 +1,153 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    background-color: rgb(63, 104, 186);
+    background: linear-gradient(130deg, rgb(211, 108, 209) 5%,rgb(182, 189, 33) 50%,red 100%);
+    overflow-x: hidden;
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position: center;
+    background-attachment: fixed;
+    height:100%;
+}
+#todos{
+    color:white;
+    border: 5px black solid;
+    border-radius: 2px;
+    padding: 20px;
+    width: 600px;
+    margin: 0 auto;
+    height:auto;
+}
+#todos > .heading{
+    margin-bottom: 30px;
+    text-align: center;
+}
+#todos > .heading> h1{
+    display: inline-block;
+    position: relative;
+    text-transform: uppercase;
+    font-size: 2.5rem;
+}
+#todos> .heading>h1::before{
+    content: '';
+    position: absolute;
+    left:0;
+    right: 0;
+    margin: 0 auto;
+    bottom:0;
+    width:10%;
+    height: 2px;
+    background-color: white;
+    transition: 0.5s;
+    cursor: pointer;
+}
+#todos> .heading> h1:hover::before{
+    width:80%;
+    cursor: pointer;
+}
+#todos> .to-do-input-container{
+    width:100%;
+    text-align: center;
+    position: relative;
+    margin-bottom: 50px;
+}
+#todos> .to-do-input-container> .todo_input{
+    width: 100%;
+    height: 40px;
+    padding: 0 0 0 10px;
+    font-size: 1.2rem;
+    outline: none;
+    border: none;
+}
+#todos> .to-do-input-container> .add-item,
+#todos> .to-do-input-container> .deleteBtn{
+    position:absolute;
+    right: 0;
+    top:50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height:40px;
+    background-color: rgb(173, 20, 20);
+    line-height:40px;
+    color: white;
+    cursor: pointer;
+}
+#todos> .to-do-input-container> .add-item:nth-child(2){
+    right: 40px;
+    background-color:rgb(64, 33, 189);
+}
+#todos > .todo-list-container{
+    list-style: none;
+    margin: 10px 0 0;
+}
+#todos > .todo-list-container .todo-list{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    overflow: hidden;
+}
+#todos > .todo-list-container .todo-list .todo-item{
+    width: 100%;
+    background-color: white;
+    color: black;
+    height: 40px;
+    line-height: 40px;
+    padding: 0 10px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+#todos > .todo-list-container .todo-list .button button{
+    width: 40px;
+    height: 50px;
+    border: none;
+    color: white;
+    outline: none;
+    cursor: pointer;
+}
+#todos > .todo-list-container .todo-list .button{
+    position: absolute;
+    right: 0;
+}
+#todos > .todo-list-container .todo-list .button .completed{
+    background-color: #3ec282;
+}
+#todos > .todo-list-container .todo-list .button .trash{
+    background-color: #e72727;
+}
+.editBtn{
+    background-color: rgb(86, 62, 193);
+}
+#todos > .todo-list-container .todo-list .button button i{
+    pointer-events: none;
+}
+.line_through{
+    text-decoration: line-through;
+    opacity: 0.7;
+    transition: .3s;
+}
+.fall{
+    opacity: 0;
+    transform: translateY(30px);
+    transition: .5s;
+}
+.fade{
+    opacity: 0;
+    transform: translateX(50px);
+    transition:0.5s;
+}
+@media screen and (max-width: 600px){
+    #todos{
+        width: 100%;
+    }
+}
+
+
+
+
+
